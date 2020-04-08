@@ -4,26 +4,10 @@
     <list default="true" id="490c187b-229d-4333-9e13-aaba54e4e451" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Repositories/CostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Repositories/CostRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Repositories/CostRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Repositories/CostRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Repositories/ProfitRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Repositories/ProfitRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Repositories/ProfitRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Repositories/ProfitRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfitController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Services/CategoryService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/CategoryService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/CostService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/CostService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/CostServiceInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/CostServiceInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/ProfitService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/ProfitService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/ProfitServiceInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/ProfitServiceInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Profit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Profit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Target.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_07_125954_create_targets_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_07_130523_add_target_id_to_profits_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/costs/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/costs/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/costs/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/costs/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/CategoryServiceInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/CategoryServiceInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/costs/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/costs/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/costs/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/costs/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profits/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profits/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profits/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profits/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/profits/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profits/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/profits/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profits/show.blade.php" afterDir="false" />
     </list>
@@ -210,7 +194,7 @@
       <workItem from="1586112045696" duration="2197000" />
       <workItem from="1586192590032" duration="603000" />
       <workItem from="1586260031545" duration="20636000" />
-      <workItem from="1586347474055" duration="4054000" />
+      <workItem from="1586347474055" duration="4878000" />
     </task>
     <servers />
   </component>

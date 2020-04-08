@@ -20,8 +20,9 @@ class CostController extends Controller
     public function index(Request $request)
     {
         $categories = $this->categoryService->getCategories();
+        $categoryName = $this->categoryService->getCategoriesName($categories);
         $costs = $this->costService->getCostByCategory($request);
-        return view('costs.index', compact('costs', 'categories', 'request'));
+        return view('costs.index', compact('costs', 'categories', 'request', 'categoryName'));
     }
 
     public function create()
@@ -49,7 +50,9 @@ class CostController extends Controller
     public function show($id)
     {
         $cost = $this->fetchCostOrFail($id);
-        return view('costs.show', compact('cost'));
+        $categories = $this->categoryService->getCategories();
+        $categoryName = $this->categoryService->getCategoriesName($categories);
+        return view('costs.show', compact('cost', 'categoryName'));
     }
 
 

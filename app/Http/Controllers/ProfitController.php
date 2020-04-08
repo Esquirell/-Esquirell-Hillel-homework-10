@@ -20,8 +20,9 @@ class ProfitController extends Controller
     public function index(Request $request)
     {
         $categories = $this->categoryService->getCategories();
+        $categoryName = $this->categoryService->getCategoriesName($categories);
         $profits = $this->profitService->getProfitByCategory($request);
-        return view('profits.index', compact('profits', 'categories', 'request'));
+        return view('profits.index', compact('profits', 'categories', 'request', 'categoryName'));
     }
 
     public function create()
@@ -51,7 +52,9 @@ class ProfitController extends Controller
     public function show($id)
     {
         $profit = $this->fetchProfitOrFail($id);
-        return view('profits.show', compact('profit'));
+        $categories = $this->categoryService->getCategories();
+        $categoryName = $this->categoryService->getCategoriesName($categories);
+        return view('profits.show', compact('profit','categoryName'));
     }
 
     public function edit($id)
