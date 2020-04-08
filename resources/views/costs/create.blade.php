@@ -4,7 +4,6 @@
     <input type="text" name="source">
     <textarea name="comment"></textarea>
     <select name="tar">
-        <option selected value="null">All</option>
         @foreach ($categories as $category)
             <option value="{{$category->id}}">{{$category->name}}</option>
         @endforeach

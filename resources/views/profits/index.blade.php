@@ -10,15 +10,17 @@
             @endif
 
         @endforeach
+
     </select>
     <input type="submit" value="Показать выбранные">
 </form>
 
 
+
 <ul>
     @foreach($profits as $profit)
         <li>
-            <a href="{{route('profits.show', ['profit' => $profit->id])}}">{{$profit->sum}} гривен отправлено в {{$profit->source}}. Категория - {{$profit->category_id}}</a>
+            <a href="{{route('profits.show', ['profit' => $profit->id])}}">{{$profit->sum}} гривен отправлено в {{$profit->source}}. Категория - </a>
             <a href="{{route('profits.edit', ['profit' => $profit->id])}}">Редактировать</a>
             <form method="post" action="{{route('profits.destroy', ['profit' => $profit->id])}}">
                 @csrf
