@@ -27,12 +27,13 @@ class ProfitService implements ProfitServiceInterface
     }
 
 
-    public function getProfitById(int $id): Profit
+    public function getProfitById(int $id)
     {
         $profit = $this->profitRepository->findById($id);
         if (!$profit) {
             throw new \Exception('Profit not found');
         }
+
         return $profit;
     }
 

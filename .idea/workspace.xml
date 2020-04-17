@@ -5,9 +5,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfitController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Repositories/CostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Repositories/CostRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Repositories/ProfitRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Repositories/ProfitRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Services/CategoryService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/CategoryService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Services/CategoryServiceInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/CategoryServiceInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/ProfitService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/ProfitService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/ProfitServiceInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/ProfitServiceInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Cost.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Cost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/costs/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/costs/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/costs/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/costs/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/profits/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profits/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/profits/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profits/show.blade.php" afterDir="false" />
     </list>
@@ -149,6 +156,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -194,7 +202,8 @@
       <workItem from="1586112045696" duration="2197000" />
       <workItem from="1586192590032" duration="603000" />
       <workItem from="1586260031545" duration="20636000" />
-      <workItem from="1586347474055" duration="4878000" />
+      <workItem from="1586347474055" duration="5435000" />
+      <workItem from="1587132423392" duration="1483000" />
     </task>
     <servers />
   </component>
@@ -210,10 +219,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1194" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586286774333" />
-    <state x="982" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586348596375">
+    <state x="982" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1587133526316">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="982" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586348596375" />
+    <state x="982" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587133526316" />
     <state x="1209" y="318" key="NewPhpClassDialog" timestamp="1586287833300">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

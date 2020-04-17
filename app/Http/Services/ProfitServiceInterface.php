@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Collection;
 
 interface ProfitServiceInterface
 {
-    public function getProfitById(int $id): Profit;
+    public function getProfitById(int $id);
 
     public function getAllProfits(int $page = null): Collection;
 

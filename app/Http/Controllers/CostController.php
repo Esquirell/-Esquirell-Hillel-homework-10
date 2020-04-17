@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 
 class CostController extends Controller
 {
-
     private $costService;
     private $categoryService;
+
     public function __construct(CostServiceInterface $costService, CategoryServiceInterface $categoryService)
     {
         $this->costService = $costService;
@@ -20,9 +20,8 @@ class CostController extends Controller
     public function index(Request $request)
     {
         $categories = $this->categoryService->getCategories();
-        $categoryName = $this->categoryService->getCategoriesName($categories);
         $costs = $this->costService->getCostByCategory($request);
-        return view('costs.index', compact('costs', 'categories', 'request', 'categoryName'));
+        return view('costs.index', compact('costs', 'categories', 'request'));
     }
 
     public function create()
@@ -50,9 +49,7 @@ class CostController extends Controller
     public function show($id)
     {
         $cost = $this->fetchCostOrFail($id);
-        $categories = $this->categoryService->getCategories();
-        $categoryName = $this->categoryService->getCategoriesName($categories);
-        return view('costs.show', compact('cost', 'categoryName'));
+        return view('costs.show', compact('cost'));
     }
 
 

@@ -15,5 +15,9 @@ class Category extends Model
     {
         return $this->hasMany(Profit::class);
     }
+    public function costs(): HasMany
+    {
+        return $this->hasMany(Cost::class);
+    }
 
 }

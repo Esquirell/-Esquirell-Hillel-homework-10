@@ -11,22 +11,24 @@ class CostRepository implements CostRepositoryInterface
 {
 
     private $model;
+    private $modelCategory;
 
     public function __construct()
     {
         $this->model = app()->make(Cost::class);
+        $this->modelCategory = app()->make(Category::class);
     }
 
     public function findByCategory($name)
     {
         if ($name != 0) {
-            $costs = Category::where('categories.id', $name)
-                ->join('costs', 'categories.id', '=', 'costs.category_id')
-                ->get();
-        }
-        else {
+            $costs = $this->modelCategory->find($name)->costs()->get();
+            
+        } else {
             $costs = Cost::all();
+
         }
+
         return $costs;
     }
 
@@ -45,15 +47,24 @@ class CostRepository implements CostRepositoryInterface
     }
 
 
-
     public function addCost($data)
     {
-        $cost = new Cost();
-        $cost->sum = $data['sum'];
-        $cost->source = $data['source'];
-        $cost->comment = $data['comment'];
-        $cost->category_id = $data['tar'];
-        $cost->save();
+        try {
+            $cost = new Cost();
+            $cost->sum = $data['sum'];
+            $cost->source = $data['source'];
+            $cost->comment = $data['comment'];
+
+            $category = $data->get('tar');
+            $cost->category()->associate($category);
+
+
+            $cost->save();
+        } catch (\Exception $e) {
+            dd($e->getMessage());
+            //abort(404);
+        }
+
     }
 
     public function deleteById($id)

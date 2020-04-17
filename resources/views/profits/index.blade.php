@@ -20,7 +20,7 @@
 <ul>
     @foreach($profits as $profit)
         <li>
-            <a href="{{route('profits.show', ['profit' => $profit->id])}}">{{$profit->sum}} гривен отправлено в {{$profit->source}}. Категория - {{$categoryName[($profit->category_id) - 1]}}</a>
+            <a href="{{route('profits.show', ['profit' => $profit->id])}}">{{$profit->sum}} гривен отправлено в {{$profit->source}}. Категория - {{$profit->category->name}}</a>
             <a href="{{route('profits.edit', ['profit' => $profit->id])}}">Редактировать</a>
             <form method="post" action="{{route('profits.destroy', ['profit' => $profit->id])}}">
                 @csrf

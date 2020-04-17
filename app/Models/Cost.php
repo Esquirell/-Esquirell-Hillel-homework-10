@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Cost extends Model
 {
@@ -11,4 +12,8 @@ class Cost extends Model
         'source',
         'comment'
     ];
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

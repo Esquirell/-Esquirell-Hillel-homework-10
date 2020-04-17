@@ -38,10 +38,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    /*
-     * public function posts(): HasMany
+
+    public function profits(): HasMany
     {
-        return $this->hasMany(Post::class);
+        return $this->hasMany(Profit::class);
     }
-    */
+    public function costs(): HasMany
+    {
+        return $this->hasMany(Cost::class);
+    }
+
 }

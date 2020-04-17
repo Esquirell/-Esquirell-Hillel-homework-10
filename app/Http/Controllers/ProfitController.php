@@ -11,6 +11,7 @@ class ProfitController extends Controller
 
     private $profitService;
     private $categoryService;
+
     public function __construct(ProfitServiceInterface $profitService, CategoryServiceInterface $categoryService)
     {
         $this->profitService = $profitService;
@@ -20,9 +21,8 @@ class ProfitController extends Controller
     public function index(Request $request)
     {
         $categories = $this->categoryService->getCategories();
-        $categoryName = $this->categoryService->getCategoriesName($categories);
         $profits = $this->profitService->getProfitByCategory($request);
-        return view('profits.index', compact('profits', 'categories', 'request', 'categoryName'));
+        return view('profits.index', compact('profits', 'categories', 'request'));
     }
 
     public function create()
@@ -51,17 +51,16 @@ class ProfitController extends Controller
 
     public function show($id)
     {
+
         $profit = $this->fetchProfitOrFail($id);
-        $categories = $this->categoryService->getCategories();
-        $categoryName = $this->categoryService->getCategoriesName($categories);
-        return view('profits.show', compact('profit','categoryName'));
+        return view('profits.show', compact('profit'));
     }
 
     public function edit($id)
     {
         $profit = $this->fetchProfitOrFail($id);
         $categories = $this->categoryService->getCategories();
-        return view('profits.edit', compact('profit','categories'));
+        return view('profits.edit', compact('profit', 'categories'));
     }
 
     public function update(Request $request, $id)
@@ -73,11 +72,14 @@ class ProfitController extends Controller
                 'comment' => 'required'
             ]);
             $this->profitService->updateProfit($id, $request->all());
-            return redirect(route('profits.show', ['profit'=> $id]));
+            return redirect(route('profits.show', ['profit' => $id]));
         } catch (\Exception $e) {
-            return redirect(route('profits.edit', ['profit'=> $id]));
+            return redirect(route('profits.edit', ['profit' => $id]));
         }
     }
+
+
+
 
 
     public function destroy($id)

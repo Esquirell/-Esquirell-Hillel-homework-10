@@ -12,11 +12,6 @@ class CategoryService implements CategoryServiceInterface
         $categories = Category::all();
         return $categories;
     }
-    public function getCategoriesName($categories){
-        foreach ($categories as $category) {
-            $categoryName [] = $category->name;
-        }
-        return $categoryName;
-    }
+
 
 }

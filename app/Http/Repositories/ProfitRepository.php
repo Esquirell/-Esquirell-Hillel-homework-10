@@ -11,23 +11,26 @@ use App\Models\Profit;
 class ProfitRepository implements ProfitRepositoryInterface
 {
     private $model;
+    private $modelCategory;
 
     public function __construct()
     {
         $this->model = app()->make(Profit::class);
+        $this->modelCategory = app()->make(Category::class);
     }
 
 
     public function findByCategory($name)
     {
         if ($name != 0) {
-            $profits = Category::where('categories.id', $name)
-                ->join('profits', 'categories.id', '=', 'profits.category_id')
-                ->get();
+            $profits = $this->modelCategory->find($name)->profits()->get();
         }
         else {
             $profits = Profit::all();
         }
+
+
+
         return $profits;
     }
 
@@ -40,12 +43,24 @@ class ProfitRepository implements ProfitRepositoryInterface
 
     public function addProfit($data)
     {
-        $profit = new Profit();
-        $profit->sum = $data['sum'];
-        $profit->source = $data['source'];
-        $profit->comment = $data['comment'];
-        $profit->category_id = $data['tar'];
-        $profit->save();
+
+
+        try {
+            $profit = new Profit();
+            $profit->sum = $data['sum'];
+            $profit->source = $data['source'];
+            $profit->comment = $data['comment'];
+
+            $category = $data->get('tar');
+            $profit->category()->associate($category);
+
+            //$profit->category_id = $data['tar'];
+            $profit->save();
+        } catch (\Exception $e) {
+
+            abort(404);
+        }
+
     }
 
 
